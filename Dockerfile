@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM public.ecr.aws/docker/library/python:3.12.5-slim-bookworm
 
 LABEL "maintainer" "Sviatoslav Sydorenko <wk+pypa@sydorenko.org.ua>"
 LABEL "repository" "https://github.com/pypa/gh-action-pypi-publish"
@@ -8,7 +8,7 @@ LABEL "org.opencontainers.image.source" "https://github.com/pypa/gh-action-pypi-
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-ENV PIP_NO_CACHE_DIR 1
+ENV PIP_NO_CACHE_DIR 1  
 ENV PIP_ROOT_USER_ACTION ignore
 
 ENV PATH "/root/.local/bin:${PATH}"
